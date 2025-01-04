@@ -24,3 +24,15 @@ pip install django
 Python: Backend programming.
 Django: Framework for building the web application.
 HTML, CSS, JavaScript: Frontend for designing the webpage.
+
+
+# Example 2: Improved Django Page with MVT Pattern
+This example builds on Example 1 by introducing the Model-View-Template (MVT) pattern. It includes animations, theme switching, and a fun cat gallery.
+
+Features:
+
+Dynamic animations and theme switching
+Cat gallery with hover effects
+Random fun facts about cats displayed dynamically
+
+
