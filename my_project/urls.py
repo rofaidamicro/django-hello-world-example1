@@ -21,5 +21,5 @@ from hello.views import hello_world  # Import the view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', hello_world),  # Add this line
+    path('', hello_world),  #to directly take us to the hello world page
 ]
