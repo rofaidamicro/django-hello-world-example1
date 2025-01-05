@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('messageboard/', include('messageboard.urls')),  # Include the messageboard app's URLs
     path('', hello_world),  # Directly take us to the hello_world view for the root URL
+    path('responses/', include('responseexamples.urls')),  # Include responseexamples URLs
 ]
