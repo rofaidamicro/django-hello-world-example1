@@ -76,14 +76,15 @@ This example demonstrates various Django response types:
    ```bash
    python manage.py runserver
    Open these URLs in the browser:
- ```bash
-Text Response: http://127.0.0.1:8000/responses/text/
-HTML Response: http://127.0.0.1:8000/responses/html/
-JSON Response: http://127.0.0.1:8000/responses/json/
-Streaming Response: http://127.0.0.1:8000/responses/stream/
-Text File Response: http://127.0.0.1:8000/responses/textfile/
-Image Response: http://127.0.0.1:8000/responses/image/
-PDF Response: http://127.0.0.1:8000/responses/pdf/
-Video Response: http://127.0.0.1:8000/responses/video/
-CSV Response: http://127.0.0.1:8000/responses/csv/
-XML Response: http://127.0.0.1:8000/responses/xml/
+ 
+   Text Response: http://127.0.0.1:8000/responses/text/
+   HTML Response: http://127.0.0.1:8000/responses/html/
+   JSON Response: http://127.0.0.1:8000/responses/json/
+   Streaming Response: http://127.0.0.1:8000/responses/stream/
+   Text File Response: http://127.0.0.1:8000/responses/textfile/
+   Image Response: http://127.0.0.1:8000/responses/image/
+   PDF Response: http://127.0.0.1:8000/responses/pdf/
+   Video Response: http://127.0.0.1:8000/responses/video/
+   CSV Response: http://127.0.0.1:8000/responses/csv/
+   XML Response: http://127.0.0.1:8000/responses/xml/
+## there's also a pdf report that includes the screenshots, analysis and comments about this project!
