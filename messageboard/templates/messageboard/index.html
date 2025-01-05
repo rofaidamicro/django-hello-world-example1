@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Board</title>
+    <style>
+        /* Full-page gradient background */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #fce4ec, #bbdefb);
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        /* Center everything */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #673ab7;
+            font-size: 3rem;
+            animation: glow 1s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #673ab7, 0 0 10px #673ab7;
+            }
+            to {
+                text-shadow: 0 0 20px #673ab7, 0 0 30px #673ab7;
+            }
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        button {
+            background: #673ab7;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #5e35b1;
+        }
+
+        .messages {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .quote {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #444;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Message Board</h1>
+        <form method="POST" action="{% url 'submit_message' %}">
+            {% csrf_token %}
+            <label for="sender">Your Name:</label>
+            <input type="text" name="sender" id="sender" required>
+            
+            <label for="recipient">Recipient Name:</label>
+            <input type="text" name="recipient" id="recipient" required>
+            
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="messages">
+            <h2>Messages</h2>
+            <p>Click the button above to send a message!</p>
+        </div>
+
+        <div class="quote">
+            <p><em>{{ quote }}</em></p>
+        </div>
+    </div>
+    <canvas id="stars"></canvas>
+    <script>
+        const canvas = document.getElementById('stars');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    
+        const stars = Array(100).fill().map(() => ({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            radius: Math.random() * 2,
+            speed: Math.random() * 0.5 + 0.1,
+        }));
+    
+        function drawStars() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#ffffff';
+            stars.forEach(star => {
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fill();
+                star.y += star.speed;
+                if (star.y > canvas.height) star.y = 0;
+            });
+            requestAnimationFrame(drawStars);
+        }
+        drawStars();
+    </script>  
+</body>
+</html>
