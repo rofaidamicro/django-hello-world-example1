@@ -13,13 +13,14 @@ This project is part of a Django assignment to demonstrate the implementation of
 
 ## How to Run
 1. Clone the repository:
-   git clone https://github.com/rofaidamicro/django-hello-world-example1.git
-2. Navigate to the project directory: cd django-hello-world-example1
-3. Install dependencies: Make sure you have Python and Django installed. If not, create a virtual environment and install Django: python -m venv venv
+   ```bash
+    git clone https://github.com/rofaidamicro/django-hello-world-example1.git
+3. Navigate to the project directory: cd django-hello-world-example1
+4. Install dependencies: Make sure you have Python and Django installed. If not, create a virtual environment and install Django: python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
 pip install django 
-4. Run the development server: python manage.py runserver
-5. Open the application in your browser
+6. Run the development server: python manage.py runserver
+7. Open the application in your browser
  # Technologies Used
 Python: Backend programming.
 Django: Framework for building the web application.
@@ -55,4 +56,25 @@ This example implements a cloud-based message board using Django. Users can:
    start the server
    Open the browser at http://127.0.0.1:8000/messageboard/.
 
+## Example 4: Django Response Types
 
+This example demonstrates various Django response types:
+- **HttpResponse**: Text response.
+- **FileResponse**: Serving files (image, PDF, and video).
+
+### How to Test
+1. Run the Django development server:
+   ```bash
+   python manage.py runserver
+   Open these URLs in the browser:
+ ```bash
+Text Response: http://127.0.0.1:8000/responses/text/
+HTML Response: http://127.0.0.1:8000/responses/html/
+JSON Response: http://127.0.0.1:8000/responses/json/
+Streaming Response: http://127.0.0.1:8000/responses/stream/
+Text File Response: http://127.0.0.1:8000/responses/textfile/
+Image Response: http://127.0.0.1:8000/responses/image/
+PDF Response: http://127.0.0.1:8000/responses/pdf/
+Video Response: http://127.0.0.1:8000/responses/video/
+CSV Response: http://127.0.0.1:8000/responses/csv/
+XML Response: http://127.0.0.1:8000/responses/xml/
