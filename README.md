@@ -52,5 +52,7 @@ This example implements a cloud-based message board using Django. Users can:
    ```bash
    python manage.py makemigrations
    python manage.py migrate
+   start the server
+   Open the browser at http://127.0.0.1:8000/messageboard/.
 
 
