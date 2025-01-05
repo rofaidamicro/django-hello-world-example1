@@ -14,13 +14,22 @@ This project is part of a Django assignment to demonstrate the implementation of
 ## How to Run
 1. Clone the repository:
    ```bash
-    git clone https://github.com/rofaidamicro/django-hello-world-example1.git
-3. Navigate to the project directory: cd django-hello-world-example1
-4. Install dependencies: Make sure you have Python and Django installed. If not, create a virtual environment and install Django: python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-pip install django 
-6. Run the development server: python manage.py runserver
-7. Open the application in your browser
+      git clone https://github.com/rofaidamicro/django-hello-world-example1.git
+2. Navigate to the project directory:
+
+        cd django-hello-world-example1
+ 3. Install dependencies: Make sure you have Python and Django installed. If not, create a virtual environment and install Django:
+
+        python -m venv venv
+        source venv/bin/activate
+# On Windows: 
+       venv\Scripts\activate
+       pip install django 
+
+4. Run the development server:
+
+       python manage.py runserver
+5. Open the application in your browser
  # Technologies Used
 Python: Backend programming.
 Django: Framework for building the web application.
@@ -28,13 +37,13 @@ HTML, CSS, JavaScript: Frontend for designing the webpage.
 
 
 ## Example 2: Improved Django Page with MVT Pattern
-This example builds on Example 1 by introducing the Model-View-Template (MVT) pattern. It includes animations, theme switching, and a fun cat gallery.
+This example builds on Example 1 by introducing the Model-View-Template (MVT) pattern. It includes animations.
 
 Features:
 
 Dynamic animations and theme switching
-Cat gallery with hover effects
-Random fun facts about cats displayed dynamically
+Cat gallery (because I'm obssessed!)
+Random fun facts about cats displayed
 ## Example 3: Cloud Message Board
 
 This example implements a cloud-based message board using Django. Users can:
