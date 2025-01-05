@@ -1,4 +1,4 @@
-# Django Hello World - Example 1
+## Django Hello World - Example 1
 
 ## Overview
 This project is part of a Django assignment to demonstrate the implementation of a **Hello World** application. It uses Django's built-in framework to create a simple web page that combines HTML, CSS, and JavaScript for a visually appealing design.
@@ -26,7 +26,7 @@ Django: Framework for building the web application.
 HTML, CSS, JavaScript: Frontend for designing the webpage.
 
 
-# Example 2: Improved Django Page with MVT Pattern
+## Example 2: Improved Django Page with MVT Pattern
 This example builds on Example 1 by introducing the Model-View-Template (MVT) pattern. It includes animations, theme switching, and a fun cat gallery.
 
 Features:
@@ -34,5 +34,23 @@ Features:
 Dynamic animations and theme switching
 Cat gallery with hover effects
 Random fun facts about cats displayed dynamically
+## Example 3: Cloud Message Board
+
+This example implements a cloud-based message board using Django. Users can:
+1. Submit messages with sender and recipient names.
+2. Retrieve the latest 20 messages sent by a specific sender.
+
+### Key Features:
+- **Models:** A `Message` model is used to store messages with fields for sender, recipient, message content, and timestamp.
+- **Views:**
+  - `submit_message`: Accepts POST requests to save messages in the database.
+  - `get_messages`: Retrieves the latest 20 messages for a given sender.
+- **Dynamic Rendering:** Uses Django templates for the main interface.
+
+### How to Run:
+1. Apply migrations:
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
 
 
